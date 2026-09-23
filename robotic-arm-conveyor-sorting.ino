@@ -37,7 +37,7 @@ if(valor == LOW){
   cintaespera();
   recibo();
   delay(2000);
-  //medio();
+  //mid();
   entrega();
 }
 }
@@ -49,14 +49,14 @@ void cintamueve() {
   digitalWrite (IN3, HIGH);
   digitalWrite (IN4, LOW);
   analogWrite (ENB, 130);
-  //Cinta entrega una carga
+  //Conveyor belt delivers a load.
 }
 void cintaespera() {
   if(valor == LOW){ 
   Serial.println("LOW");
   analogWrite(ENA, 0);
   analogWrite(ENB, 0); 
-  }//Cinta espera al brazo
+  }//The belt awaits the arm.
 }
 void medio() {
   Serial.println("Al medio");
@@ -79,7 +79,7 @@ void recibo() {
   delay(3000);
   servo1.write(180);
   servo2.write(0);
-}//Brazo recibe desde cinta
+}//Retract to the middle
 
 void entrega() {
   Serial.println("Entrega");
@@ -97,4 +97,4 @@ void entrega() {
   servo1.write(180);
   servo2.write(0);
   delay(1000); 
-}//Brazo entrega la carga
+}//Arm delivers the load
