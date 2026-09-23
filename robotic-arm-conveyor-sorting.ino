@@ -59,7 +59,7 @@ void cintaespera() {
   }//The belt awaits the arm.
 }
 void medio() {
-  Serial.println("Al medio");
+  Serial.println("Moving to center");
   servobase.write(90);
   delay(1000);
   servo1.write(180);
@@ -67,7 +67,7 @@ void medio() {
 }//Retraer al medio
 
 void recibo() {  
-  Serial.println("Busca en cinta");
+  Serial.println("Searching conveyor");
   delay(1000);
   servobase.write(34);
   delay(2000);
@@ -82,7 +82,7 @@ void recibo() {
 }//Retract to the middle
 
 void entrega() {
-  Serial.println("Entrega");
+  Serial.println("Delivering");
   delay(1000);
   servobase.write(180);  
   servo1.write(180);
